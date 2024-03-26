@@ -6,7 +6,7 @@ const Library = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch('https://mahedi-5g.github.io/create-json-file/fake.json')
+        fetch('fake.json')
             .then(res => res.json())
             .then(data => setBooks(data));
     }, [])
