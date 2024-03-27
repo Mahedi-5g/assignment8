@@ -10,6 +10,7 @@ import Home from './components/Pages/Home';
 import ListedBooks from './components/Pages/ListedBooks';
 import PagesToRead from './components/Pages/PagesToRead';
 import BookDetails from './components/Pages/BookDetails';
+// import WishlistBooks from './components/WishlistBooks';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
         element:<BookDetails></BookDetails>,
         loader:() => fetch('fake.json'),
       },
+      // {
+      //   path:'./Pages/BookDetails/:bookName',
+      //   element:<WishlistBooks></WishlistBooks>,
+      //   loader:() => fetch('fake.json'),
+      // },
       {
         path:'/readpage',
         element:<PagesToRead></PagesToRead>
