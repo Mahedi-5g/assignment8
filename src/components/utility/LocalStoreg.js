@@ -1,48 +1,4 @@
-// export const saveToLocalStoreg = (book) =>{
-//     const saveData = JSON.parse(localStorage.getItem("bookName") || []);
-//     const existedData = saveData.find((item) =>item.id == book.id);
-//     if(!existedData){
-//         saveData.push(book);
-//         localStorage.setItem("bookName", JSON.stringify(saveData));
-//         alert("Added successfully");
-//     }else{
-//         alert("already data ache");
-//     }
-//     saveData.push(book);
-// }
 
-
-// export const saveToLocalStoreg = (book) => {
-//     let saveData = JSON.parse(localStorage.getItem("id")) || []; 
-//     const existedData = saveData.find((item) => item.id == book.id);
-//     if (!existedData) {
-//         saveData.push(book);
-//         localStorage.setItem("id", JSON.stringify(saveData));
-//         alert("Added successfully");
-//     } else {
-//         alert("Data already exists");
-//     }
-// };
-
-
-// export const saveToLocalStoreg = (bookId, bookName) => {
-//     let saveData = JSON.parse(localStorage.getItem(bookName)) || []; 
-//     const existedData = saveData.find((item) => item.id === bookId.id);
-//     if (!existedData) {
-//         saveData.push(bookId);
-//         localStorage.setItem(bookName, JSON.stringify(saveData));
-//         alert("Added successfully");
-//     } else {
-//         alert("Data already exists");
-//     }
-// };
-
-// export const getFromLocalStorege = () =>{
-//     const bookId = 
-// }
-
-
-// utility/LocalStoreg.js
 
 export const saveToLocalStoreg = (book, storageKey) => {
     let saveData = JSON.parse(localStorage.getItem(storageKey)) || []; 
