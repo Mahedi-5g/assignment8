@@ -20,10 +20,6 @@ const ReadBooks = () => {
     return (
         <div>
             <div>
-                {/* <h1>listed books:{books.length} </h1> */}
-            </div>
-            
-            <div>
                 {
                     readBooks.map(book => <ReadBook key={book.bookId} book={book}></ReadBook>
                       

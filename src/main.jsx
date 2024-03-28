@@ -11,7 +11,7 @@ import ListedBooks from './components/Pages/ListedBooks';
 import PagesToRead from './components/Pages/PagesToRead';
 import BookDetails from './components/Pages/BookDetails';
 import ReadBooks from './components/ReadBooks';
-// import WishlistBooks from './components/WishlistBooks';
+import WishlistBooks from './components/WishlistBooks';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +32,11 @@ const router = createBrowserRouter([
         element:<BookDetails></BookDetails>,
         loader:() => fetch('/fake.json'),
       },
-      // {
-      //   path:'.ges/BookDetails/:bookName/Pa',
-      //   element:<WishlistBooks></WishlistBooks>,
-      //   loader:() => fetch('fake.json'),
-      // },
+      {
+        path:'/wishbook',
+        element:<WishlistBooks></WishlistBooks>,
+        loader:() => fetch('/fake.json'),
+      },
       {
         path:'/readBook',
         element:<ReadBooks></ReadBooks>,
