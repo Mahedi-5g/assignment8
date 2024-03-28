@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ReadBook = ({ book }) => {
@@ -39,7 +40,7 @@ const ReadBook = ({ book }) => {
                         <div className="flex gap-5 pt-3">
                             <h2 className="text-base font-medium text-[#328EFF] bg-[#328EFF26] p-1 rounded-lg">{book.category}</h2>
                             <h3 className="text-base font-medium text-[#FFAC33] bg-[#FFAC3326] p-1 rounded-lg">Rating: <span className=""> {book.rating}</span></h3>
-                            <p  className="text-base font-medium text-white bg-[#23BE0A] p-1 rounded-lg">View Details</p>
+                            <Link to={`/book/${book.bookId}`}  className="text-base font-medium text-white bg-[#23BE0A] p-1 rounded-lg"><button>View Details</button></Link>
                         </div>
                     </div>
                 </div>

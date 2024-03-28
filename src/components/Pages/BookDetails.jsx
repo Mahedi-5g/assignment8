@@ -3,9 +3,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveReadBook } from "../utility/LocalStoreg";
-import { saveWishBook } from "../utility/LocalStoreg2";
-
+import { saveReadBook, getStoredReadBook } from "../utility/LocalStoreg"; 
+import { saveWishBook, getStoredWishBook } from "../utility/LocalStoreg2"; 
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -14,20 +13,32 @@ const BookDetails = () => {
     const book = books.find(book => book.bookId === bookIdInit);
     console.log(book);
 
-    const handleRead = () =>{
-        saveReadBook(bookIdInit);
-        toast('Successfully added to read!');
+    const handleRead = () => {
+        const readBooks = getStoredReadBook();
+        if (readBooks.includes(bookIdInit)) {
+            toast.warn('This book has already been added to Read list!');
+        } else {
+            saveReadBook(bookIdInit);
+            toast('Successfully added to read!');
+        }
     }
 
-
     const handleWish = () => {
-        saveWishBook(bookIdInit);
-        toast('successfully added to wishlist!');
+        const wishBooks = getStoredWishBook();
+        const readBooks = getStoredReadBook();
+        
+        if (wishBooks.includes(bookIdInit)) {
+            toast.warn('This book has already been added to Wishlist!');
+        } else if (readBooks.includes(bookIdInit)) {
+            toast.error('This book has already been added to Read list. cannot be added to Wishlist!');
+        } else {
+            saveWishBook(bookIdInit);
+            toast('Successfully added to wishlist!');
+        }
     }
 
     return (
         <div>
-
             <section className="dark:bg-gray-100 dark:text-gray-800">
                 <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12  lg:flex-row">
                     <div className="flex items-center justify-center p-10 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
@@ -68,5 +79,3 @@ const BookDetails = () => {
 };
 
 export default BookDetails;
-
-

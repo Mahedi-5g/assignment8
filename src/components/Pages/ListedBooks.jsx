@@ -33,6 +33,7 @@ const ListedBooks = () => {
 
                     <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl font-semibold" aria-label="Wishlist Books" checked />
                     <div role="tabpanel" className="tab-content rounded-box p-6"><WishlistBooks></WishlistBooks></div>
+                    
                 </div>
             </div>
 
