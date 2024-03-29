@@ -12,6 +12,8 @@ const Navbar = () => {
                     <NavLink to='/' className={({ isActive }) => isActive ? 'p-1  mx-2 border-2 text-[#23BE0A] rounded-lg border-[#23BE0A]' : 'p-1  mx-2'}>Home</NavLink>
                     <NavLink to='/listed' className={({ isActive }) => isActive ? 'p-1  mx-2 border-2 text-[#23BE0A] rounded-lg border-[#23BE0A]' : 'p-1  mx-2'}>Listed Books</NavLink>
                     <NavLink to='/readpage' className={({ isActive }) => isActive ? 'p-1  mx-2 border-2 text-[#23BE0A] rounded-lg border-[#23BE0A]' : 'p-1  mx-2'}>Pages to Read</NavLink>
+                    <NavLink to='/review' className={({ isActive }) => isActive ? 'p-1  mx-2 border-2 text-[#23BE0A] rounded-lg border-[#23BE0A]' : 'p-1  mx-2'}>Review</NavLink>
+                    <NavLink to='/about' className={({ isActive }) => isActive ? 'p-1  mx-2 border-2 text-[#23BE0A] rounded-lg border-[#23BE0A]' : 'p-1  mx-2'}>About Us</NavLink>
                 </ul>
             </div>
             <div className="navbar-end text-lg font-semibold gap-2">

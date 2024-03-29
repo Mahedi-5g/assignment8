@@ -12,6 +12,7 @@ import PagesToRead from './components/Pages/PagesToRead';
 import BookDetails from './components/Pages/BookDetails';
 import ReadBooks from './components/ReadBooks';
 import WishlistBooks from './components/WishlistBooks';
+import Review from './components/Pages/Review';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/readpage',
-        element:<PagesToRead></PagesToRead>
+        element:<PagesToRead></PagesToRead>,
+        loader:() => fetch('/fake.json'),
+      },
+      {
+        path:'/review',
+        element:<Review></Review>
       }
     ]
   },

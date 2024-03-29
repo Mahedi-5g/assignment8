@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ReadBook = ({ book }) => {
     const { author, image, bookName, category, rating, bookId } = book
     return (
-        <div className="w-full h-72 p-4 border-2 my-5 rounded-2xl">
+        <div className="w-full h-72 p-4 border-2 my-5 rounded-2xl relative">
             <section className="dark:bg-gray-100 dark:text-gray-800">
                 <div className="container flex flex-col  mx-auto   lg:flex-row">
                     <div className="flex items-center justify-center  h-56 sm:h-64 lg:h-56 xl:h-112 2xl:h-128  ">
