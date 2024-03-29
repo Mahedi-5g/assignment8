@@ -41,11 +41,11 @@ const ListedBooks = () => {
             </div>
             <div>
                 <div role="tablist" className="tabs tabs-lifted">
-                    <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl font-semibold" aria-label="Read Books" />
+                    <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl font-semibold" aria-label="Read Books" checked/>
                     <div role="tabpanel" className="tab-content rounded-box p-6"><ReadBooks sortBy={sortBy}></ReadBooks></div>
 
-                    <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl font-semibold" aria-label="Wishlist Books" checked />
-                    <div role="tabpanel" className="tab-content rounded-box p-6"><WishlistBooks></WishlistBooks></div>
+                    <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl font-semibold" aria-label="Wishlist Books"  />
+                    <div role="tabpanel" className="tab-content rounded-box p-6"><WishlistBooks sortBy={sortBy}></WishlistBooks></div>
                 </div>
             </div>
         </div>
