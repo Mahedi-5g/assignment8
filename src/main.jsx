@@ -13,10 +13,14 @@ import BookDetails from './components/Pages/BookDetails';
 import ReadBooks from './components/ReadBooks';
 import WishlistBooks from './components/WishlistBooks';
 import Review from './components/Pages/Review';
+import About from './components/Pages/About';
+import ErorPage from './components/Pages/ErorPage';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
+     errorElement:<ErorPage></ErorPage>,
     element:<MainLayout></MainLayout>,
     children:[
       {
@@ -51,7 +55,12 @@ const router = createBrowserRouter([
       {
         path:'/review',
         element:<Review></Review>
-      }
+      },
+      {
+        path:'/about',
+        element:<About></About>
+      },
+      
     ]
   },
 ]);

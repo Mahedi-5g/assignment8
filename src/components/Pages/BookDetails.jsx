@@ -40,14 +40,14 @@ const BookDetails = () => {
     return (
         <div>
             <section className="dark:bg-gray-100 dark:text-gray-800">
-                <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12  lg:flex-row">
-                    <div className="flex items-center justify-center p-10 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
+                <div className="container flex flex-col justify-center  sm:p-0 lg:p-6 mx-auto sm:py-12  lg:flex-row">
+                    <div className="flex items-center justify-center lg:p-10 sm:p-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
                         <img src={book.image} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 " />
                     </div>
                     <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                        <h1 className="text-4xl font-bold leading-none sm:text-6xl mb-2">
+                        <p className="text-3xl lg:text-5xl font-bold leading-none  mb-2">
                             {book.bookName}
-                        </h1>
+                        </p>
                         <h2 className="text-xl font-medium mb-2">By:{book.author}</h2>
                         <hr />
                         <h2 className="text-xl font-medium py-2">{book.category}</h2>

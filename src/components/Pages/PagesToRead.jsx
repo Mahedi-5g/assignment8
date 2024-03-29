@@ -36,11 +36,12 @@ export default function App() {
       }, [books])
     return (
         <BarChart
-            width={800}
-            height={400}
+        
+            width={900}
+            height={450}
             data={readBooks}
             margin={{
-                top: 20,
+                top: 50,
                 right: 30,
                 left: 20,
                 bottom: 5,
